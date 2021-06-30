@@ -1,0 +1,36 @@
+.danh-muc li {
+  border: solid 1px #107105;
+  color: #107105;
+  height: 35px;
+  padding: 5px;
+}
+
+.danh-muc li span{
+  float: right;
+}
+.sach-bottom div {
+  text-align: center;
+}
+.ten-loai-sach{
+  background-color: #cefcd0;
+  color: #107105;
+  font-weight: bold;
+  padding: 10px 50px;
+  height: 45px;
+
+}
+.a-book{
+  background-color: #cefcd0;
+}
+.book{
+  background-color: white;
+  height: 96%;
+  padding: 4%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.img-theloai{
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+

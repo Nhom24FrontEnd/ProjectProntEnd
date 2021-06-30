@@ -4,10 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import { DanhsachspComponent } from './danhsachsp/danhsachsp.component';
+// @ts-ignore
 import { AppRoutingModule } from './app-routing.module'
  import {RouterModule, Routes} from '@angular/router'
-import {TrangchuModule} from "./trangchu/trangchu.module";
-import {DanhsachspModule} from "./danhsachsp/danhsachsp.module";
+const routes : Routes=[
+  {path:'trangchu', component:TrangchuComponent},
+  {path:'dssanpham', component:DanhsachspComponent}
+]
 
 @NgModule({
   declarations: [
@@ -18,8 +21,7 @@ import {DanhsachspModule} from "./danhsachsp/danhsachsp.module";
   imports: [
     BrowserModule,
     RouterModule,
-    TrangchuModule,
-    DanhsachspModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
