@@ -1,8 +1,17 @@
 .danh-muc li {
-  border: solid 1px #107105;
   color: #107105;
   height: 35px;
-  padding: 5px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.danh-muc li a{
+  color: gray;
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.danh-muc li :hover{
+  color: orange;
 }
 :after{
   float: right;

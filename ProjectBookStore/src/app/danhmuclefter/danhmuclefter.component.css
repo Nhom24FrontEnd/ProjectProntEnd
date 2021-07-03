@@ -25,29 +25,6 @@
 .danh-muc li span{
   float: right;
 }
-.sach-bottom div {
-  text-align: center;
+.dropdown-menu.show {
+  margin-left: 200px;
 }
-.ten-loai-sach{
-  background-color: #cefcd0;
-  color: #107105;
-  font-weight: bold;
-  padding: 10px 50px;
-  height: 45px;
-
-}
-.a-book{
-  background-color: #cefcd0;
-}
-.book{
-  background-color: white;
-  height: 96%;
-  padding: 4%;
-  margin-left: 3%;
-  margin-right: 3%;
-}
-.img-theloai{
-  max-width: 150px;
-  margin-bottom: 20px;
-}
-
