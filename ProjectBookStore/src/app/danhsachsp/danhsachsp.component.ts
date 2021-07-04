@@ -10,7 +10,7 @@ export class DanhsachspComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.dssanpham=[['assets/images/sach1.jpg','Con chim xanh biếc bay về','Nguyễn Nhật Ánh','àhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhga', 150.000,120.000],
+    this.dssanpham=[['/assets/images/sach1.jpg','Con chim xanh biếc bay về','Nguyễn Nhật Ánh','àhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhga', 150.000,120.000],
       ['assets/images/sach1.jpg','Con chim xanh biếc bay về','Nguyễn Nhật Ánh','àhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhga', 150.000,120.000]];
   }
 }

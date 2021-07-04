@@ -20,172 +20,19 @@
 
     </div>
     <div class="row" style="height:250px;background-color: #cefcd0; text-align:left;margin: 0" >
-      <div>
-      <div class="col col-sm-3 a-book">
+      <div class="col col-sm-3 a-book" *ngFor="let s of dssanpham">
         <div class="book" >
           <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <img class="col col-sm-6" [src]="s[0]">
             <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+              <p style="height: 33%;color: #107105;font-size: 15px">{{s[1]}}</p>
+              <p  style="height: 5%;font-size: 10px">{{s[2]}}</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">{{s[3]}}</p>
             </div>
           </div>
           <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
-          </div>
-          <div class="row">
-            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
-          </div>
-        </div>
-      </div>
-<div class="col col-sm-3 a-book">
-        <div class="book" >
-          <div class="row">
-            <img class="col col-sm-6" src="assets/images/sach1.jpg">
-            <div class="col col-sm-6" >
-              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
-              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
-              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
-            </div>
-          </div>
-          <div class="row">
-            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
-            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">{{s[4]}} đ</p>
+            <p  class="col sol-sm-6" style="color: orange">{{s[5]}} đ</p>
           </div>
           <div class="row">
             <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
@@ -211,7 +58,140 @@
           </div>
         </div>
       </div>
-      <div class="col col-sm-3 a-book">
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+<div class="col col-sm-3 a-book">
         <div class="book" >
           <div class="row">
             <img class="col col-sm-6" src="assets/images/sach1.jpg">
@@ -249,7 +229,43 @@
           </div>
         </div>
       </div>
-        <dir-pagi
+      <div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-sm-3 a-book">
+        <div class="book" >
+          <div class="row">
+            <img class="col col-sm-6" src="assets/images/sach1.jpg">
+            <div class="col col-sm-6" >
+              <p style="height: 33%;color: #107105;font-size: 15px">Con chim xanh biếc bay về</p>
+              <p  style="height: 5%;font-size: 10px">Nguyễn Nhật Ánh</p>
+              <p style="height: 50%; color: #107105;font-size: 10px">Làhgdgdj gsajdgahdsa gdhsagj dgsagdhsag dhgsahdfhgafdhg</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="col sol-sm-6" style="text-decoration-line: line-through">150.000 đ</p>
+            <p  class="col sol-sm-6" style="color: orange">120.000 đ</p>
+          </div>
+          <div class="row">
+            <a style="background-color: #107105;color: white;width: 40%;margin-left: 30% ;text-align: center" >Xem</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
