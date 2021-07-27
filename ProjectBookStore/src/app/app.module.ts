@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { DanhmuclefterComponent } from './danhmuclefter/danhmuclefter.component'
 import {ChitietComponent} from "./chitiet/chitiet.component";
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 // @ts-ignore
 const routes : Routes=[
   {path:'trangchu', component:TrangchuComponent},
@@ -23,7 +24,8 @@ const routes : Routes=[
     TrangchuComponent,
     DanhsachspComponent,
     DanhmuclefterComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
