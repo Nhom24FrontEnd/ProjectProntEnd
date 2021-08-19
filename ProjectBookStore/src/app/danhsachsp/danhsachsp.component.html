@@ -20,7 +20,7 @@
     <div class="container noidung">
         <div class="grid">
             <div class="grid__row row">
-                <div class="grid__column-4 col-md-3">
+                <div class="grid__column-3 col-md-3">
                     <nav class="category">
                         <h5 class="category__heading">CHUYÊN MỤC</h5>
                         <ul class="category-list">
@@ -50,7 +50,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="grid__column-8 col-md-9">
+                <div class="grid__column-9 col-md-9">
                     <div class="home-filter">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,159 +65,16 @@
                     </div>
                     <div class="home-product">
                         <div class="grid__row row">
-                            <div class="col col-sm-3">
+                            <div class="col col-sm-3 san-pham" *ngFor="let sp of sanpham" style="height: 300px; text-align: center;">
                                 <a class="a" href="#">
                                     <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach2.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach3.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach1.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach4.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
+                                        <div class="product-item-img" style="height: 180px"><img [src]="sp.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
+                                        <div class="product-item-name" style="height: 50px">{{sp.tenTacPham}}</div>
+                                        <div class="product-item-price">{{sp.giaSale}}</div>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class="grid__row row">
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach2.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach3.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach1.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach4.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="grid__row row">
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach2.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach3.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach1.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach4.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="grid__row row">
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach2.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach3.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach1.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col col-sm-3">
-                                <a class="a" href="#">
-                                    <div class="product-item">
-                                        <div class="product-item-img"><img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\images\sach4.jpg"></div>
-                                        <div class="product-item-name">Sách ôn thi lớp 12 trường thpt Nông Lâm</div>
-                                        <div class="product-item-price">50.000đ</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-
                     </div>
                     <div class="home-footer">
                         <nav aria-label="Page navigation example">

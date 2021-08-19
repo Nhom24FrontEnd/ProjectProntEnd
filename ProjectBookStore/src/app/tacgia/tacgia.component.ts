@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// noinspection AngularMissingOrInvalidDeclarationInModule
 @Component({
   selector: 'app-tacgia',
   templateUrl: './tacgia.component.html',

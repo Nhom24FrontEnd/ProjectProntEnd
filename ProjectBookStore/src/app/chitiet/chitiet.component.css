@@ -180,6 +180,10 @@
     color: #20C947;
     margin-left: 5px;
 }
+img.hinh {
+  max-width:280px;
+  max-height: 280px;
+}
 
 
 /* xong phan hai */

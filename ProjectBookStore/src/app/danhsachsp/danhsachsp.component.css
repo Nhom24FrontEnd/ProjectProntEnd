@@ -10,6 +10,7 @@
 .container.noidung {
     margin: 0;
     max-width: 100%;
+  padding-top: 15px;
 }
 
 .grid {
@@ -168,4 +169,7 @@
 .a1:hover {
     color: rgb(241, 95, 11);
     right: -3px;
+}
+.product-item:hover{
+  border: 2px solid orange;
 }

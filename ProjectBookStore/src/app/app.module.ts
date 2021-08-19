@@ -11,11 +11,16 @@ import { DanhmuclefterComponent } from './danhmuclefter/danhmuclefter.component'
 import {ChitietComponent} from "./chitiet/chitiet.component";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {GiohangComponent} from "./giohang/giohang.component";
+import {DiachiComponent} from "./diachi/diachi.component";
 // @ts-ignore
 const routes : Routes=[
+  {path:'', component:TrangchuComponent},
   {path:'trangchu', component:TrangchuComponent},
   {path:'dssanpham', component:DanhsachspComponent},
-  {path:'chitiet',component:ChitietComponent}
+  {path:'chitiet',component:ChitietComponent},
+  {path:'giohang',component:GiohangComponent},
+  {path:'diachi',component:DiachiComponent}
 ]
 
 @NgModule({

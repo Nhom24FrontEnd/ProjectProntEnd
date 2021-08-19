@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './diachi.component.html',
   styleUrls: ['./diachi.component.css']
 })
-export class GiohangComponent implements OnInit {
+export class DiachiComponent implements OnInit {
 
   constructor() { }
 
