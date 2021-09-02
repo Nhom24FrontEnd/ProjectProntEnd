@@ -27,12 +27,12 @@
 
       </div>
         <div class="row" style="padding-top: 10px">
-          <div class="col col-sm-2 san-pham"  *ngFor="let spn of sanphamnew" style="height: 300px; text-align: center;">
-            <a class="a" routerLink="/chitiet">
+          <div class="col col-sm-2 san-pham"  *ngFor="let spn of sanphamnew"  (click)="view(spn)" style="height: 300px; text-align: center;">
+            <a class="a" >
               <div class="product-item">
                 <div class="product-item-img" style="height: 180px"><img [src]="spn.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
                 <div class="product-item-name" style="height: 50px">{{spn.tenTacPham}}</div>
-                <div class="product-item-price">{{spn.giaSale}}</div>
+                <div class="product-item-price">{{spn.giaSale}}<ins>đ</ins></div>
               </div>
             </a>
           </div>
@@ -46,12 +46,12 @@
 
     </div>
     <div class="row" style="padding-top: 10px">
-      <div class="col col-sm-2 san-pham"  *ngFor="let spfl of sanphamfl" style="height: 300px; text-align: center;">
-        <a class="a" href="#">
+      <div class="col col-sm-2 san-pham"  *ngFor="let spfl of sanphamfl" (click)="view(spfl)" style="height: 300px; text-align: center;">
+        <a class="a" >
           <div class="product-item">
             <div class="product-item-img" style="height: 180px"><img [src]="spfl.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
             <div class="product-item-name" style="height: 50px">{{spfl.tenTacPham}}</div>
-            <div class="product-item-price">{{spfl.giaSale}}</div>
+            <div class="product-item-price">{{spfl.giaSale}}<ins>đ</ins></div>
           </div>
         </a>
       </div>
@@ -65,12 +65,12 @@
 
     </div>
     <div class="row" style="padding-top: 10px">
-      <div class="col col-sm-2 san-pham"  *ngFor="let spud of sanphamud" style="height: 300px; text-align: center;">
-        <a class="a" href="#">
+      <div class="col col-sm-2 san-pham"  *ngFor="let spud of sanphamud" (click)="view(spud)" style="height: 300px; text-align: center;">
+        <a class="a" >
           <div class="product-item">
             <div class="product-item-img" style="height: 180px"><img [src]="spud.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
             <div class="product-item-name" style="height: 50px">{{spud.tenTacPham}}</div>
-            <div class="product-item-price">{{spud.giaSale}}</div>
+            <div class="product-item-price">{{spud.giaSale}}<ins>đ</ins></div>
           </div>
         </a>
       </div>

@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 // @ts-ignore
 import sanpham from '../file/sanpham.json';
+import {NavigationExtras, Router} from "@angular/router";
 
 class Product {
   maSach?:string;
@@ -11,6 +12,7 @@ class Product {
   giaSale?:string;
   theLoai?:string;
   linkAnh?:string;
+  soluong?:string;
   moTa?:string;
 }
 @Component({
@@ -21,8 +23,17 @@ class Product {
 
 export class DanhsachspComponent implements OnInit {
  sanpham?:Product[];
-  constructor() { }
+  navication?: NavigationExtras;
+  constructor(private router: Router) { }
   ngOnInit(): void {
    this.sanpham=sanpham;
+  }
+
+  view(sp: Product) {
+    if(sp){
+      this.navication= {state : sp};
+      this.router.navigateByUrl("/chitiet",this.navication);
+    }
+
   }
 }

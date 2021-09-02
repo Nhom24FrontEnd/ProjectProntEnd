@@ -6,6 +6,9 @@ import sanphamnew from  '../file/sanphamnew.json';
 import sanphamfl from  '../file/sanphamfl.json';
 // @ts-ignore
 import sanphamud from  '../file/sanphamud.json';
+import {NavigationExtras, Router} from "@angular/router";
+import {state} from "@angular/animations";
+
 class Product {
   maSach?:string;
   tenTacPham?:string;
@@ -15,6 +18,7 @@ class Product {
   giaSale?:string;
   theLoai?:string;
   linkAnh?:string;
+  soluong?:string;
   moTa?:string;
 }
 @Component({
@@ -26,14 +30,23 @@ export class TrangchuComponent implements OnInit {
   sanphamfl?: Product[];
   sanphamnew?: Product[];
   sanphamud?: Product[];
-  constructor() {
+  navication?: NavigationExtras;
+  constructor(private router: Router) {
 
   }
   ngOnInit(): void {
+
     this.sanphamnew=sanphamnew;
     this.sanphamfl=sanphamfl;
     this.sanphamud=sanphamud;
   }
+
+  view(spn: Product) {
+      if(spn){
+        this.navication= {state : spn};
+        this.router.navigateByUrl("/chitiet",this.navication);
+  }
+}
 
 
 }
