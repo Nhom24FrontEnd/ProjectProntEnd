@@ -5,7 +5,13 @@
     padding-right: 20px;
     margin-top: 1px;
     color: rgb(231, 242, 248);
-    margin-left: 30px;
+   
+    font-size: 15px;
+    line-height: 20px;
+}
+.b1:hover{
+    color: rgb(19, 20, 20);
+    ;    
 }
 
 .row {
