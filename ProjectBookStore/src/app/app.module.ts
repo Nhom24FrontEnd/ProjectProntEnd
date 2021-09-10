@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {GiohangComponent} from "./giohang/giohang.component";
 import {DiachiComponent} from "./diachi/diachi.component";
+import {FormsModule} from "@angular/forms";
 // @ts-ignore
 const routes : Routes=[
   {path:'', component:TrangchuComponent},
@@ -32,13 +33,16 @@ const routes : Routes=[
     HeaderComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    RouterModule.forRoot(routes)
-  
-  ],
+    imports: [
+        BrowserModule,
+        RouterModule,
+        RouterModule.forRoot(routes),
+        FormsModule
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

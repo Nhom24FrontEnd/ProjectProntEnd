@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 // @ts-ignore
-import sanphamnew from  '../file/sanphamnew.json';
-// @ts-ignore
-import sanphamfl from  '../file/sanphamfl.json';
-// @ts-ignore
-import sanphamud from  '../file/sanphamud.json';
+import sanpham from  '../file/sanpham.json';
+
 import {NavigationExtras, Router} from "@angular/router";
-import {state} from "@angular/animations";
+
 
 class Product {
   maSach?:string;
@@ -27,18 +24,36 @@ class Product {
   styleUrls: ['./trangchu.component.css']
 })
 export class TrangchuComponent implements OnInit {
-  sanphamfl?: Product[];
-  sanphamnew?: Product[];
-  sanphamud?: Product[];
+  sanpham: Product[]=[];
+  sanphamfl: Product[]=[];
+  sanphamnew: Product[]=[];
+  sanphamud: Product[]=[];
   navication?: NavigationExtras;
   constructor(private router: Router) {
 
   }
   ngOnInit(): void {
-
-    this.sanphamnew=sanphamnew;
-    this.sanphamfl=sanphamfl;
-    this.sanphamud=sanphamud;
+    this.newProduct(this.sanphamnew);
+    this.flProduct(this.sanphamfl);
+    this.udProduct(this.sanphamud);
+  }
+  newProduct(list: Product[]){
+    this.sanpham=sanpham;
+    for (let i = 0; i <6; i++) {
+      list.push(this.sanpham[i]);
+    }
+  }
+  flProduct(list: Product[]){
+    this.sanpham=sanpham;
+    for (let i = 0; i <6; i++) {
+      list.push(this.sanpham[i+6]);
+    }
+  }
+  udProduct(list: Product[]){
+    this.sanpham=sanpham;
+    for (let i = 0; i <6; i++) {
+      list.push(this.sanpham[i+12]);
+    }
   }
 
   view(spn: Product) {

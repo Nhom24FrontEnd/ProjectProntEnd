@@ -84,7 +84,11 @@
     right: 0;
     transition: right linear 0.1s;
 }
-
+.category-item__link:active {
+  color: red;
+;
+  right: -3px;
+}
 .category-item__link:hover {
     color: rgb(241, 95, 11);
     ;

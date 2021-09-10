@@ -14,21 +14,23 @@
     <div class="row" style="padding-left: 40px">
        <img src="assets/images/logo_header.jpg" class="col col-sm-3" routerLink="/trangchu">
         <form class="col col-sm-6" style="padding-top: 20px">
-            <input type="text" placeholder="Tìm kiếm . . ." style="border:solid 1px #148b06  ;height: 35px; width: 60%; border-radius: 5px; outline: none; padding-left: 20px;">
-            <a href="#"><i class="fas fa-search" style="color: #57b157; font-size: 25px; margin-left: 15px;"></i></a>
+          <input [(ngModel)]="searchText" type="text" placeholder="Tìm kiếm . . ." style="border:solid 1px #148b06  ;height: 35px; width: 60%; border-radius: 5px; outline: none; padding-left: 20px;">
+            <a (click)="search()">
+              <i class="fas fa-search" style="color: #57b157; font-size: 25px; margin-left: 15px;"></i>
+            </a>
         </form>
         <div class="col col-sm-3" style="padding-top: 20px">
             <button routerLink="/giohang" style=" outline: none; display: block; border:none; background-color:white;">
                 <i class="fas fa-shopping-cart" style="color: #46963d; font-size: 28px; margin-left: 30px;"></i>
                 <div class="btn btn-danger btn-sm" style="font-size: 12.5px; background-color: rgb(226, 158, 33); border: none;">5</div>
              </button>
-             
+
         </div>
     </div>
     <div class="row" style=" background-color: #148b06; color: white; size: 10px; padding-top: 8px; padding-left: 50px;font-family: Arial">
         <a class="col col-sm-2 a1 b1" routerLink="/trangchu">TRANG CHỦ</a>
-        <a class="col col-sm-2 a1 b1" routerLink="/dssanpham">SÁCH TIẾNG VIỆT</a>
-        <a class="col col-sm-2 a1 b1" routerLink="/dssanpham">SÁCH TIẾNG ANH</a>
-        <a class="col col-sm-2 a1 b1" routerLink="/dssanpham">SÁCH TIẾNG TRUNG</a>
+        <a class="col col-sm-4 a1 b1" routerLink="/dssanpham">XEM NHIỀU SÁCH HƠN </a>
+<!--        <a class="col col-sm-2 a1 b1" (click)="listProduct('Sách Học Ngoại Ngữ')">SÁCH NGOẠI NGỮ</a>-->
+<!--        <a class="col col-sm-2 a1 b1" (click)="listProduct('Sách Văn Học')">SÁCH VĂN HỌC</a>-->
     </div>
 </div>
