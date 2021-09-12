@@ -22,8 +22,11 @@ class Product {
 })
 
 export class DanhsachspComponent implements OnInit {
+  p: number = 1;
+  term = ''
   search: string="";
   theloai: string="";
+  collection: any[] = sanpham;
  sanpham:Product[]=[];
  list:Product[]=[];
   navication?: NavigationExtras;

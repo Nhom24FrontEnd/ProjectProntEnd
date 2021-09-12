@@ -149,7 +149,7 @@
     height: 70px;
     margin-bottom: 10px;
 }
-
+/* css search */
 .pagination {
     margin-left: 370px;
     margin-top: 15px;
@@ -176,4 +176,65 @@
 }
 .product-item:hover{
   border: 2px solid orange;
+}
+.pagination {
+    margin-left: 370px;
+    margin-top: 15px;
+}
+
+.category-item1 {
+    margin-left: 37px;
+}
+
+.a1 {
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+    display: block;
+    padding: 4px 16px;
+    position: relative;
+    right: 0;
+    transition: right linear 0.1s;
+    margin-left: -14px;
+}
+
+.a1:hover {
+    color: rgb(241, 95, 11);
+    right: -3px;
+}
+.product-item:hover{
+  border: 2px solid orange;
+}
+.search{
+  position:relative;
+  display:inline-block;
+  color:white;
+  padding:14px 16px;
+  
+}
+.search-bar{
+  position:absolute;
+  display:none;
+  right:0;
+  top:45px;
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  outline:none;
+  padding: 12px 14px;
+  transition: width 0.4s ease-in-out;
+}
+.search:hover{
+  background-color:lightpink;
+  color:black;
+}
+.search:hover .search-bar{
+  display:block;
+}
+form input[type="text"]:focus{
+  width:500px;
+  background-color:lightpink;
 }

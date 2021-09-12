@@ -13,7 +13,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {GiohangComponent} from "./giohang/giohang.component";
 import {DiachiComponent} from "./diachi/diachi.component";
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from '@angular/forms';
+
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 // @ts-ignore
 const routes : Routes=[
   {path:'', component:TrangchuComponent},
@@ -33,16 +36,12 @@ const routes : Routes=[
     HeaderComponent,
     FooterComponent
   ],
-    imports: [
-        BrowserModule,
-        RouterModule,
-        RouterModule.forRoot(routes),
-        FormsModule
-
-    ],
+  imports: [
+    BrowserModule,NgxPaginationModule,Ng2SearchPipeModule,FormsModule,
+    RouterModule,
+    RouterModule.forRoot(routes)
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule { }
