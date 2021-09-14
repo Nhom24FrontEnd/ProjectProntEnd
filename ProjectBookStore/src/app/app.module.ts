@@ -13,10 +13,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {GiohangComponent} from "./giohang/giohang.component";
 import {DiachiComponent} from "./diachi/diachi.component";
+
 import { FormsModule } from '@angular/forms';
 
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 // @ts-ignore
 const routes : Routes=[
   {path:'', component:TrangchuComponent},
@@ -24,7 +27,9 @@ const routes : Routes=[
   {path:'dssanpham', component:DanhsachspComponent},
   {path:'chitiet',component:ChitietComponent},
   {path:'giohang',component:GiohangComponent},
-  {path:'diachi',component:DiachiComponent}
+  {path:'diachi',component:DiachiComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent}
 ]
 
 @NgModule({
@@ -34,7 +39,9 @@ const routes : Routes=[
     DanhsachspComponent,
     DanhmuclefterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,NgxPaginationModule,Ng2SearchPipeModule,FormsModule,

@@ -68,7 +68,7 @@
                     </div>
                     <div class="home-product">
                         <div class="grid__row row">
-                            <div class="col col-sm-3 san-pham" *ngFor="let sp of collection | paginate: { itemsPerPage: 12, currentPage: p }|filter:term" (click)="view(sp)" style="height: 300px; text-align: center;">
+                            <div class="col col-sm-3 san-pham" *ngFor="let sp of sanpham |filter:term| paginate: { itemsPerPage: 12, currentPage: p }" (click)="view(sp)" style="height: 300px; text-align: center;">
                                 <a class="a" >
                                     <div class="product-item">
                                         <div class="product-item-img" style="height: 180px"><img [src]="sp.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
@@ -76,9 +76,12 @@
                                       <div class="product-item-price"><span>{{sp.giaSale}}</span><ins>đ</ins></div>
                                     </div>
                                 </a>
+                                
                             </div>
+                            
                         </div>
                     </div>
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
                     <!-- <div class="home-footer" >
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
@@ -98,7 +101,7 @@
                             </ul>
                         </nav>
                     </div> -->
-                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    
                 </div>
             </div>
         </div>
