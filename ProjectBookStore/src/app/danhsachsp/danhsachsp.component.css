@@ -10,7 +10,7 @@
 .container.noidung {
     margin: 0;
     max-width: 100%;
-  padding-top: 15px;
+    padding-top: 15px;
 }
 
 .grid {
@@ -83,12 +83,15 @@
     position: relative;
     right: 0;
     transition: right linear 0.1s;
+    cursor: pointer;
 }
+
 .category-item__link:active {
-  color: red;
-;
-  right: -3px;
+    color: red;
+    ;
+    right: -3px;
 }
+
 .category-item__link:hover {
     color: rgb(241, 95, 11);
     ;
@@ -149,7 +152,10 @@
     height: 70px;
     margin-bottom: 10px;
 }
+
+
 /* css search */
+
 .pagination {
     margin-left: 370px;
     margin-top: 15px;
@@ -157,6 +163,7 @@
 
 .category-item1 {
     margin-left: 37px;
+    cursor: pointer;
 }
 
 .a1 {
@@ -174,9 +181,11 @@
     color: rgb(241, 95, 11);
     right: -3px;
 }
-.product-item:hover{
-  border: 2px solid orange;
+
+.product-item:hover {
+    border: 2px solid orange;
 }
+
 .pagination {
     margin-left: 370px;
     margin-top: 15px;
@@ -185,7 +194,6 @@
 .category-item1 {
     margin-left: 37px;
 }
-
 
 .a1 {
     text-decoration: none;
@@ -197,48 +205,55 @@
     transition: right linear 0.1s;
     margin-left: -14px;
 }
+
 .category1 li .active a {
     color: rgb(241, 95, 11);
-    
 }
+
 .category1 li.a1:hover {
     color: rgb(241, 95, 11);
     right: -3px;
 }
-.product-item:hover{
-  border: 2px solid orange;
+
+.product-item:hover {
+    border: 2px solid orange;
 }
-.search{
-  position:relative;
-  display:inline-block;
-  color:white;
-  padding:14px 16px;
-  
+
+.search {
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
 }
-.search-bar{
-  position:absolute;
-  display:none;
-  right:0;
-  top:45px;
+
+.search-bar {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 45px;
 }
+
 input[type=text] {
-  width: 100px;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 4px;
-  font-size: 16px;
-  outline:none;
-  padding: 12px 14px;
-  transition: width 0.4s ease-in-out;
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    padding: 12px 14px;
+    transition: width 0.4s ease-in-out;
 }
-.search:hover{
-  background-color:rgb(255, 255, 255);
-  color:black;
+
+.search:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
-.search:hover .search-bar{
-  display:block;
+
+.search:hover .search-bar {
+    display: block;
 }
-form input[type="text"]:focus{
-  width:450px;
-  background-color:rgb(255, 255, 255);
+
+form input[type="text"]:focus {
+    width: 450px;
+    background-color: rgb(255, 255, 255);
 }

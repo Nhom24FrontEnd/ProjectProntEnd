@@ -24,34 +24,20 @@
                         <h5 class="category__heading">CHUYÊN MỤC</h5>
                         <ul class="category1">
                             <li class="category-item category-item--active">
-                                <a (click)="find('Sách Của Shop')" class="category-item__link">Sách Của Shop</a> 
+                                <a class="category-item__link">Sách Của Shop</a>
                                 <ul class="category1">
-                                    <li class="active category-item1"><a class="a1" (click)="find('Sách Văn Học')">Sách Văn Học</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Kinh Tế')">Sách Kinh Tế</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Kĩ Năng Sống')">Sách Kĩ Năng Sống</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Bà Mẹ - Em Bé')">Sách Bà Mẹ - Em Bé</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Giáo Khoa - Giáo Trình')">Sách Giáo Khoa - Giáo Trình</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Học Ngoại Ngữ')">Sách Học Ngoại Ngữ</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Kiến Thức Tổng Hợp')">Sách Kiến Thức Tổng Hợp</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Lịch Sử')">Sách Lịch Sử</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Khoa Học - Kĩ Thuật')">Sách Khoa Học - Kĩ Thuật</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Tôn Giáo - Tâm Linh')">Sách Tôn Giáo - Tâm Linh</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Chính Trị- Pháp Lý')">Sách Chính Trị- Pháp Lý</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Công Nghệ Thông Tin')">Sách Công Nghệ Thông Tin</a></li>
-                                    <li class="category-item1"><a class="a1" (click)="find('Sách Động Vật')">Sách Động Vật</a></li>
-                                </ul>  
-                            
-                                
+                                    <li [class.active]="selectedCate == item" class="category-item1" *ngFor="let item of category_1"><a class="a1" (click)="find(item)">{{item}}</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="grid__column-9 col-md-9 " >
+                <div class="grid__column-9 col-md-9 ">
                     <form>
-                        <input  type="text" name="search" placeholder="Tìm Kiếm.." [(ngModel)]="term">
-                      </form>
-                    <div class="home-filter" >
-                      <span  style="float: left; color: #107105; font-size: 20px;width: 70%">{{theloai}}</span>
+                        <input type="text" name="search" placeholder="Tìm Kiếm.." [(ngModel)]="term">
+                    </form>
+                    <div class="home-filter">
+                        <span style="float: left; color: #107105; font-size: 20px;width: 70%">{{theloai}}</span>
                         <div class="dropdown " style="width:30%;float: right;margin-left: 400px">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Sắp xếp theo
@@ -65,16 +51,16 @@
                     <div class="home-product">
                         <div class="grid__row row">
                             <div class="col col-sm-3 san-pham" *ngFor="let sp of sanpham |filter:term| paginate: { itemsPerPage: 12, currentPage: p }" (click)="view(sp)" style="height: 300px; text-align: center;">
-                                <a class="a" >
+                                <a class="a">
                                     <div class="product-item">
                                         <div class="product-item-img" style="height: 180px"><img [src]="sp.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
                                         <div class="product-item-name" style="height: 50px">{{sp.tenTacPham}}</div>
-                                      <div class="product-item-price"><span>{{sp.giaSale}}</span><ins>đ</ins></div>
+                                        <div class="product-item-price"><span>{{sp.giaSale}}</span><ins>đ</ins></div>
                                     </div>
                                 </a>
-                                
+
                             </div>
-                            
+
                         </div>
                     </div>
                     <pagination-controls (pageChange)="p = $event"></pagination-controls>
@@ -97,7 +83,7 @@
                             </ul>
                         </nav>
                     </div> -->
-                    
+
                 </div>
             </div>
         </div>

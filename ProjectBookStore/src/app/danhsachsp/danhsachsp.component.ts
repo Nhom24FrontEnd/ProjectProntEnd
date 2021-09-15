@@ -28,6 +28,22 @@ export class DanhsachspComponent implements OnInit {
   theloai: string="";
   collection: any[] = sanpham;
  sanpham:Product[]=[];
+ selectedCate: string = "";
+ category_1: string[] = [
+ 'Sách Văn Học',
+ 'Sách Kinh Tế',
+ 'Sách Kĩ Năng Sống',
+ 'Sách Bà Mẹ - Em Bé',
+ 'Sách Giáo Khoa - Giáo Trình',
+ 'Sách Học Ngoại Ngữ',
+ 'Sách Kiến Thức Tổng Hợp',
+ 'Sách Lịch Sử',
+ 'Sách Khoa Học - Kĩ Thuật',
+ 'Sách Tôn Giáo - Tâm Linh',
+ 'Sách Chính Trị- Pháp Lý',
+ 'Sách Công Nghệ Thông Tin',
+ 'Sách Động Vật'
+] 
  list:Product[]=[];
   navication?: NavigationExtras;
   constructor(private route: Router) {
@@ -59,6 +75,7 @@ export class DanhsachspComponent implements OnInit {
       this.sanpham=sanpham;
       return
     }
+    this.selectedCate = name;
     this.list=sanpham;
     this.sanpham=[];
     for (let li of this.list) {
