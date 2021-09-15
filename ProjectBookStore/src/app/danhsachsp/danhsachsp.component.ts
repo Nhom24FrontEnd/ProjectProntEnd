@@ -27,9 +27,9 @@ export class DanhsachspComponent implements OnInit {
   search: string="";
   theloai: string="";
   collection: any[] = sanpham;
- sanpham:Product[]=[];
- selectedCate: string = "";
- category_1: string[] = [
+  sanpham:Product[]=[];
+  selectedCate: string = "";
+  category_1: string[] = [
  'Sách Văn Học',
  'Sách Kinh Tế',
  'Sách Kĩ Năng Sống',

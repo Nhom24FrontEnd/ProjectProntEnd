@@ -14,7 +14,7 @@
 
 <body>
     <div class="body1">
-        <div class="container" >
+        <div class="container">
             <hr width="1175px">
             <div class="row">
                 <div class="body1a col-3">
@@ -25,9 +25,9 @@
                     <p>Tác Giả:<a class="a" href="#">{{product.tacGia}}</a></p>
                     <p>Nhà Xuất Bản:<a class="a" href="#">{{product.nxb}}</a></p>
                     <p>Nhà phát hành:<a class="a" href="#">{{product.nxb}}</a></p>
-<!--                    <p>Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính-->
-<!--                        là ...-->
-<!--                    </p>-->
+                    <!--                    <p>Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính-->
+                    <!--                        là ...-->
+                    <!--                    </p>-->
                     <hr>
                     <h6>Thông tin kèm theo</h6>
                     <p><i class="fas fa-check-circle"></i> Có dịch vụ bọc sách plastic cao cấp cho sách này </p>
@@ -44,26 +44,28 @@
                                 <ul class="ul1">
                                     <li>Giá bìa</li>
                                     <li>Giá bán</li>
-<!--                                    <li>Tiết Kiệm</li>-->
+                                    <!--                                    <li>Tiết Kiệm</li>-->
                                     <li>Chất lượng sách</li>
-                                  <li>  <div class="a31">
-                                    <p><i class="fas fa-check-circle" style="color: #20C947;"></i> CÒN HÀNG</p>
-                                    <p>Còn {{product.soluong}} sản phẩm.</p>
-                                  </div></li>
+                                    <li>
+                                        <div class="a31">
+                                            <p><i class="fas fa-check-circle" style="color: #20C947;"></i> CÒN HÀNG</p>
+                                            <p>Còn {{product.soluong}} sản phẩm.</p>
+                                        </div>
+                                    </li>
                                 </ul>
                                 <ul class="ul2">
                                     <li><del>{{product.gia}} <ins>đ</ins></del></li>
                                     <li style="color:red">{{product.giaSale}}<ins>đ</ins></li>
-<!--                                    <li style="color:#17722C" ><ins>đ(20%)</ins></li>-->
+                                    <!--                                    <li style="color:#17722C" ><ins>đ(20%)</ins></li>-->
                                     <li style="color:#17722C">Loại A</li>
                                 </ul>
                                 <hr class="abc">
                             </div>
                             <div class="a3">
-<!--                                <div class="a31">-->
-<!--                                    <p><i class="fas fa-check-circle" style="color: #20C947;"></i> CÒN HÀNG</p>-->
-<!--                                    <p>Còn {{product.soluong}} sản phẩm.</p>-->
-<!--                                </div>-->
+                                <!--                                <div class="a31">-->
+                                <!--                                    <p><i class="fas fa-check-circle" style="color: #20C947;"></i> CÒN HÀNG</p>-->
+                                <!--                                    <p>Còn {{product.soluong}} sản phẩm.</p>-->
+                                <!--                                </div>-->
                                 <div class="a32">
                                     <button style="color: white;" name="button" type="button">&nbsp; MUA NGAY</button>
                                 </div>
@@ -80,33 +82,34 @@
             <div class="body2">
                 <div class="body2a col-md-9">
                     <div class="ul3">
-                        <ul>
-                            <li style="margin-left: -30px;">GIỚI THIỆU SÁCH </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <li>THÔNG TIN CHI TIẾT</li>
+                        <ul style="margin-left: -30px; COLOR:rgb(235, 167, 42)">GIỚI THIỆU SÁCH
                         </ul>
-                        <br>
                         <h5>{{product.tenTacPham}}</h5>
                         <p>{{product.moTa}}</p>
+                        <ul style="margin-left: -30px;  COLOR:rgb(235, 167, 42)">THÔNG TIN CHI TIẾT
+
+                        </ul>
+
                     </div>
                 </div>
-<!--                <div class="body2b col-md-3">-->
-<!--                    <div class="b1">-->
-<!--                        <b>Thông tin tác giả</b>-->
-<!--                        <hr>-->
-<!--                    </div>-->
-<!--                    <div class="b2">-->
-<!--                        <a href="#">{{product.tacGia}}</a>-->
-<!--                        <img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\Image\b.jpg">-->
+                <!--                <div class="body2b col-md-3">-->
+                <!--                    <div class="b1">-->
+                <!--                        <b>Thông tin tác giả</b>-->
+                <!--                        <hr>-->
+                <!--                    </div>-->
+                <!--                    <div class="b2">-->
+                <!--                        <a href="#">{{product.tacGia}}</a>-->
+                <!--                        <img src="C:\Users\duybe\OneDrive\Máy tính\ProjectProntEnd\ProjectBookStore\src\assets\Image\b.jpg">-->
 
-<!--                        <p>Nguyễn Nhật Ánh là tên và cũng là bút danh của một nhà văn Việt Nam chuyên viết cho tuổi mới lớn. Ông sinh ngày 7 tháng 5 năm 1955 tại huyện Thăng Bình, Quảng Nam. Năm 13 tuổi ông đăng báo bài thơ đầu tiên. Tác phẩm đầu tiên in-->
-<!--                            thành sách là một tập thơ: Thành phố tháng tư ...</p>-->
-<!--                    </div>-->
-<!--                    <div class="b3">-->
-<!--                        <a href="#"><i class="fas fa-angle-double-right" style="color: rgb(180, 177, 177)"></i> Vào trang riêng của tác giả</a>-->
-<!--                        <br>-->
-<!--                        <a href="#"><i class="fas fa-angle-double-right" style="color: rgb(180, 177, 177)"></i> Xem tất cả các sách của tác giả</a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                        <p>Nguyễn Nhật Ánh là tên và cũng là bút danh của một nhà văn Việt Nam chuyên viết cho tuổi mới lớn. Ông sinh ngày 7 tháng 5 năm 1955 tại huyện Thăng Bình, Quảng Nam. Năm 13 tuổi ông đăng báo bài thơ đầu tiên. Tác phẩm đầu tiên in-->
+                <!--                            thành sách là một tập thơ: Thành phố tháng tư ...</p>-->
+                <!--                    </div>-->
+                <!--                    <div class="b3">-->
+                <!--                        <a href="#"><i class="fas fa-angle-double-right" style="color: rgb(180, 177, 177)"></i> Vào trang riêng của tác giả</a>-->
+                <!--                        <br>-->
+                <!--                        <a href="#"><i class="fas fa-angle-double-right" style="color: rgb(180, 177, 177)"></i> Xem tất cả các sách của tác giả</a>-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
         </div>
     </div>
