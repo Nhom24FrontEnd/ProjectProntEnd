@@ -183,11 +183,11 @@ body{
 .forms .form-content .button input:hover{
   background: rgb(235, 167, 42);
 }
-.forms .form-content label{
+.forms .form-content .tao-tai-khoan{
   color: rgb(235, 167, 42);
   cursor: pointer;
 }
-.forms .form-content label:hover{
+.forms .form-content .tao-tai-khoan:hover{
   text-decoration: underline;
 }
 .forms .form-content .login-text,

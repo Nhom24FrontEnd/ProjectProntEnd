@@ -43,7 +43,7 @@ export class DanhsachspComponent implements OnInit {
  'Sách Chính Trị- Pháp Lý',
  'Sách Công Nghệ Thông Tin',
  'Sách Động Vật'
-] 
+]
  list:Product[]=[];
   navication?: NavigationExtras;
   constructor(private route: Router) {
@@ -71,7 +71,8 @@ export class DanhsachspComponent implements OnInit {
   }
   find(name: string){
     this.theloai=name;
-    if(name=="Sách Của Shop"||name==""){
+    if(name=="all"||name==""){
+      this.theloai="";
       this.sanpham=sanpham;
       return
     }
@@ -120,9 +121,9 @@ sortTang(list:Product[]){
   }
   subNumberGia(num: string): number{
     var result;
-    num.trim();
-    num.replace(".","");
-    result=Number.parseInt(num);
+    // @ts-ignore
+    result=num.trim().replaceAll(".","");
+    result=Number.parseInt(result);
     return result;
 
   }
@@ -133,4 +134,7 @@ sortTang(list:Product[]){
     }
 
   }
+
+
+
 }

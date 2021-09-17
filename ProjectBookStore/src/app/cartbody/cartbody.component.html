@@ -1,0 +1,133 @@
+<h1>Giỏ Hàng</h1>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Giá</label>
+    <label class="product-quantity">Số lượng</label>
+    <label class="product-removal">Xoá</label>
+    <label class="product-line-price">Thành Tiền</label>
+  </div>
+  <div id="cart-body">
+    <div class="product" *ngFor="let c of cart">
+      <div class="product-image">
+        <img [src]="c.product.linkAnh">
+      </div>
+      <div class="product-details">
+        <div class="product-title">{{c.product.tenTacPham}}</div>
+        <!--      <p class="product-description">Mô tả</p>-->
+      </div>
+      <div class="product-price" >{{c.product.giaSale}}</div>
+      <div class="product-quantity">
+        <input type="number" [value]="c.quantity" min="1" (click)="changeQuantity(c.product.maSach)"  [id]="c.product.maSach">
+      </div>
+      <div class="product-removal">
+        <button class="remove-product" (click)="deleteItem(c.product.maSach)">
+          Xoá
+        </button>
+      </div>
+      <div class="product-line-price" >{{subNumberGia(c.product.giaSale)*c.quantity}}</div>
+    </div>
+
+
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Tổng tiền</label>
+      <div class="totals-value" id="cart-subtotal">{{tongtien()}}</div>
+    </div>
+
+
+    <button class="checkout" (click)="checkout(cart)">Thanh toán</button>
+
+  </div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      /* Set rates + misc */
+      var taxRate = 0.05;
+      var shippingRate = 15.00;
+      var fadeTime = 300;
+
+
+      /* Assign actions */
+      $('.product-quantity input').change( function() {
+        updateQuantity(this);
+      });
+
+      $('.product-removal button').click( function() {
+        removeItem(this);
+      });
+
+
+      /* Recalculate cart */
+      function recalculateCart()
+      {
+        var subtotal = 0;
+
+        /* Sum up row totals */
+        $('.product').each(function () {
+          subtotal += parseFloat(đ(this).children('.product-line-price').text());
+        });
+
+        /* Calculate totals */
+        var tax = subtotal * taxRate;
+        var shipping = (subtotal > 0 ? shippingRate : 0);
+        var total = subtotal + tax + shipping;
+
+        /* Update totals display */
+        $('.totals-value').fadeOut(fadeTime, function() {
+          $('#cart-subtotal').html(subtotal.toFixed(2));
+          $('#cart-tax').html(tax.toFixed(2));
+          $('#cart-shipping').html(shipping.toFixed(2));
+          $('#cart-total').html(total.toFixed(2));
+          if(total == 0){
+            $('.checkout').fadeOut(fadeTime);
+          }else{
+            $('.checkout').fadeIn(fadeTime);
+          }
+          $('.totals-value').fadeIn(fadeTime);
+        });
+      }
+
+
+      /* Update quantity */
+      function updateQuantity(quantityInput)
+      {
+        /* Calculate line price */
+        var productRow = $(quantityInput).parent().parent();
+        var price = parseFloat(productRow.children('.product-price').text());
+        var quantity = $(quantityInput).val();
+        var linePrice = price * quantity;
+
+        /* Update line price display and recalc cart totals */
+        productRow.children('.product-line-price').each(function () {
+          $(this).fadeOut(fadeTime, function() {
+            $(this).text(linePrice.toFixed(2));
+            recalculateCart();
+            $(this).fadeIn(fadeTime);
+          });
+        });
+      }
+
+
+      /* Remove item from cart */
+      function removeItem(removeButton)
+      {
+        /* Remove row from DOM and recalc cart total */
+        var productRow = $(removeButton).parent().parent();
+        productRow.slideUp(fadeTime, function() {
+          productRow.remove();
+          recalculateCart();
+        });
+      }
+
+    });
+
+  </script>   </div>
+

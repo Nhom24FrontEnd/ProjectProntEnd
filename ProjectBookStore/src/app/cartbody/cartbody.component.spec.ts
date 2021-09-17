@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DanhmuclefterComponent } from './danhmuclefter.component';
+import { CartbodyComponent } from './cartbody.component';
 
-describe('DanhmuclefterComponent', () => {
-  let component: DanhmuclefterComponent;
-  let fixture: ComponentFixture<DanhmuclefterComponent>;
+describe('CartbodyComponent', () => {
+  let component: CartbodyComponent;
+  let fixture: ComponentFixture<CartbodyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DanhmuclefterComponent ]
+      declarations: [ CartbodyComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DanhmuclefterComponent);
+    fixture = TestBed.createComponent(CartbodyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

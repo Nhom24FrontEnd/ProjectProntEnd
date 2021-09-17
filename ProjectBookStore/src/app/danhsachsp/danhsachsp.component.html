@@ -24,7 +24,7 @@
                         <h5 class="category__heading">CHUYÊN MỤC</h5>
                         <ul class="category1">
                             <li class="category-item category-item--active">
-                                <a class="category-item__link">Sách Của Shop</a>
+                                <a class="category-item__link" (click)="find('all')">Sách Của Shop</a>
                                 <ul class="category1">
                                     <li [class.active]="selectedCate == item" class="category-item1" *ngFor="let item of category_1"><a class="a1" (click)="find(item)">{{item}}</a></li>
                                 </ul>
@@ -55,7 +55,7 @@
                                     <div class="product-item">
                                         <div class="product-item-img" style="height: 180px"><img [src]="sp.linkAnh" style="margin-top: 5px; width:auto;height:auto;max-height: 180px"></div>
                                         <div class="product-item-name" style="height: 50px">{{sp.tenTacPham}}</div>
-                                        <div class="product-item-price"><span>{{sp.giaSale}}</span><ins>đ</ins></div>
+                                        <div class="product-item-price"><span>{{sp.giaSale}}</span><ins></ins></div>
                                     </div>
                                 </a>
 

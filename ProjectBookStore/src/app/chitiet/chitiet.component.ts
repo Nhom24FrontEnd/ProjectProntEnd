@@ -5,7 +5,8 @@ import {Router} from "@angular/router";
 import sanpham from '../file/sanpham.json';
 
 class Product {
-  maSach?:string;
+  // @ts-ignore
+  maSach:string;
   tenTacPham?:string;
   tacGia?:string;
   nxb?:string;
@@ -16,6 +17,10 @@ class Product {
   soluong?:string;
   moTa?:string;
 }
+class Item{
+  product?: Product;
+  quantity?: number;
+}
 
 @Component({
   selector: 'app-chitiet',
@@ -24,6 +29,7 @@ class Product {
 })
 export class ChitietComponent implements OnInit {
   product: Product;
+sanpham?: Product[];
 
   constructor(private route: Router) {
     const navigation=this.route.getCurrentNavigation();
@@ -31,6 +37,38 @@ export class ChitietComponent implements OnInit {
   }
   ngOnInit(): void {
 
+  }
+
+   addToCart(id: string){
+    let cart=[];
+    let storage=localStorage.getItem('cart');
+    if(storage){
+   cart=JSON.parse(storage);
+    }
+    let product= this.getProductById(id);
+    // @ts-ignore
+    let item=cart.find(c=> c.product.maSach==id);
+    if(item){
+      // @ts-ignore
+      item.quantity+=1;
+
+    }else {
+      // @ts-ignore
+      cart.push({product, quantity:1});
+    }
+    localStorage.setItem('cart',JSON.stringify(cart));
+     alert("Đã thêm vào giỏ hàng !");
+
+  }
+
+  // @ts-ignore
+  getProductById(id: string): Product{
+    this.sanpham=sanpham;
+    for (let sp of sanpham) {
+      if(sp.maSach==id){
+        return sp;
+      }
+    }
   }
 
 }

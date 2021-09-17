@@ -1,122 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-<h1 style="text-align: center; color: green;" >Giao hàng và thanh toán</h1>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
-
-<div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <div class="container">
-  <form action="">
-    <h2 style="color: green;">Địa chỉ giao hàng</h2>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Họ và tên</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname-2" name="firstname" placeholder="Tên của bạn">
-      </div>
-    </div>
+  <div class="contact-section">
+    <h2 class="ct-section-head">
+      Địa Chỉ Nhận Hàng
+    </h2>
+    <div class="row contact-fields">
+      <div class="col-md-7 left-form">
+        <form method="post" action="">
+          <div class="form-group">
+            <span>Họ và tên</span>
+            <label class="sr-only" for="fname">First Name *</label>
+            <input class="required form-control" id="fname" name="fname" placeholder="First Name&nbsp;*" type="text">
+          </div>
 
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Điện thoại</label>
+          <div class="form-group">
+            <span>E-mail</span>
+            <label class="sr-only" for="contactEmail">Email *</label>
+            <input class="required form-control h5-email" id="contactEmail" name="contactEmail" placeholder="Email&nbsp;*" type="text">
+          </div>
+          <div class="form-group">
+            <span>Số điện thoại</span>
+            <label class="sr-only" for="contactPhone">Phone *</label>
+            <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text">
+          </div>
+          <div class="form-group">
+            <span>Địa chỉ</span>
+            <label class="sr-only" for="lname">Số nhà,đường,... *</label>
+            <input class="required form-control" id="lname" name="lname" placeholder="Số nhà,đường,... &nbsp;*" type="text">
+          </div>
+          <div class="form-group">
+            <span>Ghi chú</span>
+            <label class="sr-only" for="comment">Type your message here</label>
+            <textarea class="required form-control" id="comment" name="comment" placeholder="Type your message here&nbsp;*" rows="6"></textarea>
+          </div>
+          <button class="btn btn-accent" type="submit">Submit</button>
+        </form>
       </div>
-      <div class="col-75">
-        <input type="text" id="fname-1" name="firstname" placeholder="sđt">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Tỉnh thành</label>
-      </div>
-      <div class="col-75">
-        <select id="country" name="country">
-          <option value="vietnam">Bình Dương</option>
-          <option value="laos">HCM</option>
-          <option value="cambodia">Hà Nội</option>
-          <option value="vietnam">Đà Nẵng</option>
-          <option value="laos">Huế</option>
-          <option value="cambodia">Sóc Trăng</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Quận / huyện</label>
-      </div>
-      <div class="col-75">
-        <select id="country-2" name="country">
-          <option value="vietnam">Huyện Phú giáo</option>
-          <option value="laos">Quận Thủ Đức</option>
-          <option value="cambodia">Quận Tân Phú</option>
-          <option value="vietnam">Quận Gò Vấp</option>
-          <option value="laos">Quận 9</option>
-          <option value="cambodia">Quận 7</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Phường / xã</label>
-      </div>
-      <div class="col-75">
-        <select id="country-1" name="country">
-          <option value="vietnam">An Ninh</option>
-          <option value="laos">An Thái</option>
-          <option value="cambodia">An Bình</option>
-          <option value="vietnam">Vĩnh Hoà</option>
-          <option value="laos">Phước Sang</option>
-          <option value="cambodia">Cambodia</option>
-        </select>
+      <div class="col-md-5 contact-info" style="padding-left: 20px">
+        <div class="phone" >
+          <h1>Sản phẩm</h1>
+          <div class="row">
+            <span style="width: 55%">Tên sản phẩm</span>
+            <span style="width: 15%">Số lượng</span>
+            <span style="width: 30%">Giá tiền</span>
+          </div>
+          <div class="row" *ngFor="let i of item">
+            <span style="width: 55%; color: #17722C" >{{i.product.tenTacPham}}</span>
+            <span style="width: 15%">{{i.quantity}}</span>
+            <span style="width: 30%">{{subNumberGia(i.product.giaSale)*i.quantity}}</span>
+          </div>
+        </div>
+        <div class="email">
+          <h2>Email</h2>
+          <a href="mailto:info@decidedekalb.com">info@webcorpco.com</a>
+        </div>
+        <div class="location">
+          <h2>Visit</h2>
+          <p>One Town Center <br>
+            123 Easy Street <br>
+            Suite 1000 <br>
+            Orlando, FL 32803
+            <br>
+            <a class="btn btn-accent" href="" target="_blank"><img src="https://www.solodev.com/assets/contact-us-page/map-marker.png" alt="Map Marker">Google Maps</a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Tên đường</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname-3" name="firstname" placeholder="địa chỉ...">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Số nhà</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="số nhà...">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Ghi chú</label>
-      </div>
-      <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Viết gì đó..."
-                                  style="height: 85px;"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <br>
-      <input type="submit" value="Lưu">
-      <input type="submit" value="Huỷ bỏ">
-    </div>
-  </form>
+  </div>
 </div>
-
-</div>
-</body>
-</html>
