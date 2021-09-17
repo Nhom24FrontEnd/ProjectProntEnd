@@ -20,6 +20,9 @@ class Item{
   product?: Product;
   quantity?: number;
 }
+class OnName{
+  user?: string;
+}
 
 @Component({
   selector: 'app-detail',
@@ -27,6 +30,7 @@ class Item{
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
+  onName?:OnName;
   product: Product;
   sanpham?: Product[];
   navication?: NavigationExtras;
@@ -39,6 +43,16 @@ this.like(this.product.maSach);
   }
 
   addToCart(id: string){
+
+    let store = localStorage.getItem('onUser');
+    if (store) {
+      this.onName = JSON.parse(store);
+    }
+    // @ts-ignore
+    if (this.onName.user== "" || this.onName.user== null) {
+      alert('Bạn cần đăng nhập !');
+      this.route.navigate(['login']);
+    }else{
     let cart=[];
     let storage=localStorage.getItem('cart');
     if(storage){
@@ -64,6 +78,7 @@ this.like(this.product.maSach);
     }
     localStorage.setItem('cart',JSON.stringify(cart));
     alert("Đã thêm vào giỏ hàng !");
+    }
 
   }
 

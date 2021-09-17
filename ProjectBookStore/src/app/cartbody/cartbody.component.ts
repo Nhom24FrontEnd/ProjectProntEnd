@@ -21,12 +21,16 @@ class Item{
   // @ts-ignore
   quantity: number;
 }
+class OnName{
+  user?: string;
+}
 @Component({
   selector: 'app-cartbody',
   templateUrl: './cartbody.component.html',
   styleUrls: ['./cartbody.component.css']
 })
 export class CartbodyComponent implements OnInit {
+  onName?:OnName;
   navication?: NavigationExtras;
   cart: Item[]=[];
   constructor(private router: Router) { }
@@ -44,14 +48,14 @@ export class CartbodyComponent implements OnInit {
   }
   deleteItem(id: string){
     let storage=localStorage.getItem('cart');
+    let dsitem=[];
+    this.cart=[];
     if(storage){
-      this.cart=JSON.parse(storage);
+      dsitem=JSON.parse(storage);
     }
-    for (let item of this.cart) {
-      if(item.product.maSach==id){
-
-        // @ts-ignore
-        this.cart.pop(item);
+    for (let item of dsitem) {
+      if(item.product.maSach!=id){
+this.cart.push(item);
       }
     }
     localStorage.setItem('cart',JSON.stringify(this.cart));
@@ -98,9 +102,18 @@ export class CartbodyComponent implements OnInit {
   }
 
   checkout(cart: Item[]) {
+    let store = localStorage.getItem('onUser');
+    if (store) {
+      this.onName = JSON.parse(store);
+    }
+    // @ts-ignore
+    if (this.onName.user== "" || this.onName.user== null) {
+      alert('Bạn cần đăng nhập !');
+      this.router.navigate(['login']);
+    }else {
     if(cart){
       this.navication= {state : cart};
       this.router.navigateByUrl("/thanhtoan",this.navication);
     }
-  }
+  }}
 }
