@@ -13,64 +13,54 @@
     </h2>
     <div class="row contact-fields">
       <div class="col-md-7 left-form">
-        <form method="post" action="">
+        <form method="post" action="" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
           <div class="form-group">
             <span>Họ và tên</span>
             <label class="sr-only" for="fname">First Name *</label>
-            <input class="required form-control" id="fname" name="fname" placeholder="First Name&nbsp;*" type="text">
+            <input class="required form-control" id="fname" name="fname" formControlName="fname" placeholder="First Name&nbsp;*" type="text">
           </div>
-
           <div class="form-group">
             <span>E-mail</span>
             <label class="sr-only" for="contactEmail">Email *</label>
-            <input class="required form-control h5-email" id="contactEmail" name="contactEmail" placeholder="Email&nbsp;*" type="text">
+            <input class="required form-control h5-email" id="contactEmail" name="contactEmail" formControlName="contactEmail" placeholder="Email&nbsp;*" type="text">
           </div>
           <div class="form-group">
             <span>Số điện thoại</span>
             <label class="sr-only" for="contactPhone">Phone *</label>
-            <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text">
+            <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" formControlName="contactPhone" placeholder="Phone&nbsp;*" type="text">
           </div>
           <div class="form-group">
             <span>Địa chỉ</span>
             <label class="sr-only" for="lname">Số nhà,đường,... *</label>
-            <input class="required form-control" id="lname" name="lname" placeholder="Số nhà,đường,... &nbsp;*" type="text">
+            <input class="required form-control" id="lname" name="lname" formControlName="lname" placeholder="Số nhà,đường,... &nbsp;*" type="text">
           </div>
           <div class="form-group">
             <span>Ghi chú</span>
-            <label class="sr-only" for="comment">Type your message here</label>
-            <textarea class="required form-control" id="comment" name="comment" placeholder="Type your message here&nbsp;*" rows="6"></textarea>
+            <label class="sr-only" for="comment">Ghi chú cho đơn hàng</label>
+            <textarea class="required form-control" id="comment" name="comment" formControlName="comment" placeholder="Ghi chú tại đây&nbsp;*" rows="6"></textarea>
           </div>
-          <button class="btn btn-accent" type="submit">Submit</button>
+          <button class="btn btn-accent" type="submit" [disabled]="!formdata.valid" >Thanh Toán</button>
         </form>
       </div>
       <div class="col-md-5 contact-info" style="padding-left: 20px">
         <div class="phone" >
-          <h1>Sản phẩm</h1>
+          <h3>Sản phẩm</h3>
           <div class="row">
             <span style="width: 55%">Tên sản phẩm</span>
             <span style="width: 15%">Số lượng</span>
             <span style="width: 30%">Giá tiền</span>
           </div>
-          <div class="row" *ngFor="let i of item">
+          <div class="row" *ngFor="let i of item" style="border-bottom: 1px solid #333333">
             <span style="width: 55%; color: #17722C" >{{i.product.tenTacPham}}</span>
-            <span style="width: 15%">{{i.quantity}}</span>
-            <span style="width: 30%">{{subNumberGia(i.product.giaSale)*i.quantity}}</span>
+            <span style="width: 15%; text-align: center">{{i.quantity}}</span>
+            <span style="width: 30%">{{subNumberGia(i.product.giaSale)*i.quantity}}<ins>đ</ins></span>
           </div>
         </div>
         <div class="email">
-          <h2>Email</h2>
-          <a href="mailto:info@decidedekalb.com">info@webcorpco.com</a>
+          <h3>Số tiền cần thanh toán</h3>
+          <a>{{tongtien()}} <ins>đ</ins></a>
         </div>
-        <div class="location">
-          <h2>Visit</h2>
-          <p>One Town Center <br>
-            123 Easy Street <br>
-            Suite 1000 <br>
-            Orlando, FL 32803
-            <br>
-            <a class="btn btn-accent" href="" target="_blank"><img src="https://www.solodev.com/assets/contact-us-page/map-marker.png" alt="Map Marker">Google Maps</a>
-          </p>
-        </div>
+
       </div>
     </div>
   </div>

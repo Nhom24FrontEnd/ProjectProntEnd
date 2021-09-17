@@ -100,7 +100,7 @@ export class CartbodyComponent implements OnInit {
   checkout(cart: Item[]) {
     if(cart){
       this.navication= {state : cart};
-      this.router.navigateByUrl("/diachi",this.navication);
+      this.router.navigateByUrl("/thanhtoan",this.navication);
     }
   }
 }

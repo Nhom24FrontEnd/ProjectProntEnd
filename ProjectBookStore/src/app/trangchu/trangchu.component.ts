@@ -36,6 +36,7 @@ export class TrangchuComponent implements OnInit {
     this.newProduct(this.sanphamnew);
     this.flProduct(this.sanphamfl);
     this.udProduct(this.sanphamud);
+    // window.localStorage.clear();
   }
   newProduct(list: Product[]){
     this.sanpham=sanpham;
@@ -62,6 +63,5 @@ export class TrangchuComponent implements OnInit {
         this.router.navigateByUrl("/chitiet",this.navication);
   }
 }
-
 
 }

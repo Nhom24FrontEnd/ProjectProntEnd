@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
         // @ts-ignore
         this.router.navigate(['trangchu']);
         // alert("Đăng nhập thành công !")
+        this.onUser(data.uname);
         break;
         return;
       }
@@ -68,5 +69,9 @@ export class LoginComponent implements OnInit {
     if((at!=-1)&&(at!=0)&&(dot!=-1)&&(dot>at+1)&&(dot<email.length-1)&&(space==-1)){
       return true;
     }else return false;
+  }
+  onUser(user: string) {
+    localStorage.setItem('onUser', JSON.stringify({user: user}));
+
   }
 }

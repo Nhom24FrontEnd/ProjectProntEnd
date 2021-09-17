@@ -76,6 +76,23 @@ export class DanhsachspComponent implements OnInit {
       this.sanpham=sanpham;
       return
     }
+    if(name=="Danh Sách Yêu Thích"){
+      this.theloai=name;
+      this.sanpham=[];
+      let list=[];
+      let storage=localStorage.getItem('like');
+      if (storage != null) {
+        list = JSON.parse(storage);
+      }
+      for (let li of list) {
+        for (let sp of sanpham){
+          if (sp.maSach==li){
+            this.sanpham.push(sp);
+          }
+        }
+      }
+      return;
+    }
     this.selectedCate = name;
     this.list=sanpham;
     this.sanpham=[];
